@@ -1,0 +1,19 @@
+form {
+    width: 500px;
+    height: 500px;
+}
+
+#ent-kilo {
+    margin: 10px 10px 10px 50px;
+    width: 40px;
+    font-size: 18px;
+}
+
+.bottom {
+    display: none;
+}
+
+em {
+    color: red;
+    font-weight: bold;
+}
