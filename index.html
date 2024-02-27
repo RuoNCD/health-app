@@ -10,35 +10,45 @@
 
 <body>
     <div class="personel-Recognizer-Card">
+        <h4>Günlük Su İhtiyacı Hesaplama Aracı</h4>
         <div class="top">
-            <form>
-                <fieldset>
-                    <legend>Günlük Su İhtiyacı Hesaplama Aracı</legend>
-                    <div class="notes">
-                        <div class="notlar"><em>*</em> Doldurulması zorunlu alanlar.</div>
-                    </div>
-                    <label for="kilo">Kilo : </label>
-                    <input type="text" name="kilogram" id="ent-kilo">
-                    <button type="submit"></button>
-                </fieldset>
-            </form>
-
-
+            <div class="notes">
+                <div class="notlar"><em>*</em> Doldurulması zorunlu alanlar.</div>
+            </div>
+            <div class="row1">
+                <p><em>*</em> Kilo :</p>
+                <input type="text" name="kilogram" id="ent-kilo" spellcheck="false" oninput="val(event)">
+            </div>
+            <div class="row2">
+                <p><em>*</em> Tempo :</p>
+                <select name="activity" id="activity">
+                    <option selected="selected" value="1">Az</option>
+                    <option value="2">Orta</option>
+                    <option value="3">Çok</option>
+                </select>
+            </div>
+            <div class="row3">
+                <button type="button" onclick="calculate_daily_water_need()">Hesapla</button>
+            </div>
         </div>
         <div class="bottom">
-            <p class="per-day-water"><b>Günlük Su İhtiyacınız:</b> 2706 ml/gün (2.7 litre/gün)</p>
-            <p class="per-day-cup"><b>Bardak:</b>11 bardak (250ml'lik)</p>
-            <p><b>NOT:</b> Burada belirtilen günlük su ihtiyacınızın bir kısmını yemeklerden alıyorsunuz. Bu nedenle
+            <p class="per-day-water"><b>Günlük Su İhtiyacınız: </b>2706 ml/gün (2.7 litre/gün)</p>
+            <p class="per-day-cup"><b>Bardak: </b>11 bardak (250ml'lik)</p>
+            <p><b>NOT:</b> Burada belirtilen günlük su ihtiyacınızın bir kısmını yemeklerden alıyorsunuz. Bu
+                nedenle
                 burada
                 belirtilenden daha az miktarda su içmeniz yeterli olacaktır.</p>
-            <p><b>Uyandıktan Sonra:</b> 2 bardak su içmek iç organlarınızı aktifleştirerek güne hazırlar.</p>
-            <p><b>Yemekten 30 Dakika Önce:</b> 1 bardak su içmek hem sindirim sisteminizi harekete geçirir hem de
+            <p><b>Uyandıktan Sonra:</b> 2 bardak su içmek iç organlarınızı aktifleştirerek güne hazırlar.
+            </p>
+            <p><b>Yemekten 30 Dakika Önce:</b> 1 bardak su içmek hem sindirim sisteminizi harekete geçirir
+                hem de
                 yemeklerde
                 daha az kalori tüketerek kilo vermenizi sağlar.</p>
             <p><b>Banyodan Önce:</b> 1 bardak su içmek kan basıncınızı düşürmeye yardımcı olur.</p>
             <p><b>Uyumadan Önce:</b> 1 bardak su içmek ise kalp krizi ve inme riskini azaltır.</p>
         </div>
     </div>
+    <script src="index.js"></script>
 </body>
 
 </html>
